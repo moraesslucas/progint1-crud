@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -23,6 +24,9 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        Validator::extend('phone_number', function($attribute, $value, $parameters)
+        {
+            return preg_match('/(\(\d{2}\)\s)(\d{4,5}\-\d{4})/', $value);
+        });
     }
 }

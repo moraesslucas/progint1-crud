@@ -10,10 +10,10 @@ class Livro extends Model
     use HasFactory;
 
     protected $table = 'livros';
-    protected $fillable = ['titulo', 'anopublicacao', 'edicao', 'editora'];
+    protected $fillable = ['titulo', 'anopublicacao', 'edicao', 'editora', 'id_fornecedor'];
 
     public function fornecedor()
     {
-        return $this->belongsTo('App\Fornecedor', 'id_fornecedor');
+        return $this->belongsTo('App\Models\Fornecedor', 'id_fornecedor');
     }
 }

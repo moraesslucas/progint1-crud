@@ -31,3 +31,18 @@ Route::post('/funcionarios/criar', 'FuncionariosController@store')->name('criar_
 Route::get('/funcionarios/editar/{id}', 'FuncionariosController@edit')->name('editar_funcionario');
 Route::put('/funcionarios/editar/{id}', 'FuncionariosController@update')->name('alterar_funcionario');
 Route::delete('/funcionarios/{id}', 'FuncionariosController@delete')->name('excluir_funcionario');
+
+Route::get('/livros/criar', 'LivrosController@create');
+Route::get('/livros', 'LivrosController@showAll')->name('exibir_livros');
+Route::post('/livros/criar', 'LivrosController@store')->name('criar_livro');
+Route::get('/livros/editar/{id}', 'LivrosController@edit')->name('editar_livro');
+Route::put('/livros/editar/{id}', 'LivrosController@update')->name('alterar_livro');
+Route::delete('/livros/{id}', 'LivrosController@delete')->name('excluir_livro');
+
+
+Route::get('/estoques/criar', 'EstoquesController@create');
+Route::get('/estoques', 'EstoquesController@showAll')->name('exibir_estoques');
+Route::post('/estoques/criar', 'EstoquesController@store')->name('criar_estoque');
+Route::get('/estoques/editar/{id}', 'EstoquesController@edit')->name('editar_estoque');
+Route::put('/estoques/editar/{id}', 'EstoquesController@update')->name('alterar_estoque');
+Route::delete('/estoques/{id}', 'EstoquesController@delete')->name('excluir_estoque');

@@ -133,15 +133,16 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/Http/Controllers" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/resources/views" />
       <recent name="$PROJECT_DIR$/app/Http/Controllers" />
+      <recent name="$PROJECT_DIR$/resources/views" />
       <recent name="$PROJECT_DIR$/resources/views/fornecedores" />
       <recent name="$PROJECT_DIR$/resources/css" />
     </key>
@@ -184,7 +185,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1603137522929</updated>
-      <workItem from="1603137524021" duration="9750000" />
+      <workItem from="1603137524021" duration="20758000" />
     </task>
     <servers />
   </component>
@@ -196,28 +197,32 @@
       <screen x="0" y="23" width="1440" height="804" />
     </state>
     <state x="184" y="87" width="1071" height="714" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.804@0.23.1440.804" timestamp="1603144693658" />
-    <state width="1398" height="206" key="GridCell.Tab.0.bottom" timestamp="1603151403044">
+    <state x="458" y="212" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1603207025593">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="206" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1603151403044" />
+    <state x="458" y="212" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1440.900@0.0.1440.900" timestamp="1603207025593" />
+    <state width="1398" height="244" key="GridCell.Tab.0.bottom" timestamp="1603205014746">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1398" height="244" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1603205014746" />
     <state width="1398" height="256" key="GridCell.Tab.0.bottom/0.23.1440.804@0.23.1440.804" timestamp="1603144891471" />
     <state width="1398" height="206" key="GridCell.Tab.0.bottom/0.23.1440.806@0.23.1440.806" timestamp="1603145037731" />
-    <state width="1398" height="206" key="GridCell.Tab.0.center" timestamp="1603151403043">
+    <state width="1398" height="244" key="GridCell.Tab.0.center" timestamp="1603205014744">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="206" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1603151403043" />
+    <state width="1398" height="244" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1603205014744" />
     <state width="1398" height="256" key="GridCell.Tab.0.center/0.23.1440.804@0.23.1440.804" timestamp="1603144891471" />
     <state width="1398" height="206" key="GridCell.Tab.0.center/0.23.1440.806@0.23.1440.806" timestamp="1603145037730" />
-    <state width="1398" height="206" key="GridCell.Tab.0.left" timestamp="1603151403043">
+    <state width="1398" height="244" key="GridCell.Tab.0.left" timestamp="1603205014743">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="206" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1603151403043" />
+    <state width="1398" height="244" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1603205014743" />
     <state width="1398" height="256" key="GridCell.Tab.0.left/0.23.1440.804@0.23.1440.804" timestamp="1603144891470" />
     <state width="1398" height="206" key="GridCell.Tab.0.left/0.23.1440.806@0.23.1440.806" timestamp="1603145037729" />
-    <state width="1398" height="206" key="GridCell.Tab.0.right" timestamp="1603151403044">
+    <state width="1398" height="244" key="GridCell.Tab.0.right" timestamp="1603205014745">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="206" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1603151403044" />
+    <state width="1398" height="244" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1603205014745" />
     <state width="1398" height="256" key="GridCell.Tab.0.right/0.23.1440.804@0.23.1440.804" timestamp="1603144891471" />
     <state width="1398" height="206" key="GridCell.Tab.0.right/0.23.1440.806@0.23.1440.806" timestamp="1603145037730" />
     <state width="1398" height="256" key="GridCell.Tab.1.bottom" timestamp="1603144904453">
@@ -252,20 +257,36 @@
       <screen x="0" y="23" width="1440" height="806" />
     </state>
     <state width="1398" height="256" key="GridCell.Tab.2.right/0.23.1440.806@0.23.1440.806" timestamp="1603144904454" />
-    <state x="539" y="372" key="NewPhpFileDialog" timestamp="1603148918671">
+    <state x="539" y="372" key="NewPhpFileDialog" timestamp="1603200146474">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="539" y="372" key="NewPhpFileDialog/0.0.1440.900@0.0.1440.900" timestamp="1603148918671" />
+    <state x="539" y="372" key="NewPhpFileDialog/0.0.1440.900@0.0.1440.900" timestamp="1603200146474" />
     <state x="539" y="355" key="NewPhpFileDialog/0.23.1440.804@0.23.1440.804" timestamp="1603144110509" />
-    <state x="221" y="64" key="SettingsEditor" timestamp="1603144814015">
-      <screen x="0" y="23" width="1440" height="804" />
-    </state>
-    <state x="221" y="64" key="SettingsEditor/0.23.1440.804@0.23.1440.804" timestamp="1603144814015" />
-    <state x="385" y="143" width="670" height="758" key="search.everywhere.popup" timestamp="1603147337991">
+    <state x="221" y="46" key="SettingsEditor" timestamp="1603198867615">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="385" y="143" width="670" height="758" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1603147337991" />
+    <state x="221" y="46" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1603198867615" />
+    <state x="221" y="64" key="SettingsEditor/0.23.1440.804@0.23.1440.804" timestamp="1603144814015" />
+    <state x="343" y="67" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1603155080232">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="343" y="67" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1440.900@0.0.1440.900" timestamp="1603155080232" />
+    <state x="385" y="143" width="670" height="758" key="search.everywhere.popup" timestamp="1603208963145">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="385" y="143" width="670" height="758" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1603208963145" />
     <state x="385" y="151" width="670" height="676" key="search.everywhere.popup/0.23.1440.804@0.23.1440.804" timestamp="1603144830352" />
     <state x="385" y="151" width="670" height="678" key="search.everywhere.popup/0.23.1440.806@0.23.1440.806" timestamp="1603144945083" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/resources/views/livros/read.blade.php</url>
+          <line>24</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

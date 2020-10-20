@@ -11,5 +11,5 @@ const mix = require('laravel-mix');
  |
  */
 
-mix.js('resources/js/app.js', 'public/js')
+mix.combine(['resources/js/app.js', 'node_modules/jquery/dist/jquery.js', 'node_modules/jquery-mask-plugin/dist/jquery.mask.js'], 'public/js/outputFile.js')
     .sass('resources/sass/app.scss', 'public/css');
