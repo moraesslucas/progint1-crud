@@ -44,7 +44,7 @@ CREATE TABLE `estoques` (
   KEY `estoques_id_livro_foreign` (`id_livro`),
   CONSTRAINT `estoques_id_funcionario_foreign` FOREIGN KEY (`id_funcionario`) REFERENCES `funcionarios` (`id`),
   CONSTRAINT `estoques_id_livro_foreign` FOREIGN KEY (`id_livro`) REFERENCES `livros` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -53,7 +53,7 @@ CREATE TABLE `estoques` (
 
 LOCK TABLES `estoques` WRITE;
 /*!40000 ALTER TABLE `estoques` DISABLE KEYS */;
-INSERT INTO `estoques` VALUES (2,2,1,10,10,'2020-10-20','2020-10-20 18:40:21','2020-10-20 18:40:21');
+INSERT INTO `estoques` VALUES (2,2,1,10,10,'2020-10-20','2020-10-20 18:40:21','2020-10-20 18:40:21'),(3,4,1,10,1,'2020-10-22','2020-10-22 15:47:39','2020-10-22 15:47:39'),(4,7,2,50,50,'2020-10-22','2020-10-22 15:56:28','2020-10-22 15:56:28'),(5,4,3,5,5,'2020-10-22','2020-10-22 15:57:09','2020-10-22 15:57:09'),(6,5,3,5,5,'2020-10-31','2020-10-22 15:57:21','2020-10-22 15:57:21'),(7,3,3,30,30,'2020-10-22','2020-10-22 15:57:31','2020-10-22 15:57:31'),(8,4,3,10,10,'2020-10-22','2020-10-22 15:57:44','2020-10-22 15:57:44'),(9,2,3,5,5,'2020-10-22','2020-10-22 15:57:56','2020-10-22 15:57:56');
 /*!40000 ALTER TABLE `estoques` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -102,7 +102,7 @@ CREATE TABLE `fornecedores` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=23 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -111,7 +111,7 @@ CREATE TABLE `fornecedores` (
 
 LOCK TABLES `fornecedores` WRITE;
 /*!40000 ALTER TABLE `fornecedores` DISABLE KEYS */;
-INSERT INTO `fornecedores` VALUES (19,'Lucas Moraes','Avenida Manoel Elias,2200,A608 T1','Porto Alegre','(51) 9804-47530','2020-10-20 18:05:10','2020-10-20 18:05:58');
+INSERT INTO `fornecedores` VALUES (19,'Lucas Moraes','Avenida Manoel Elias,2200,A608 T1','Porto Alegre','(51) 9804-47530','2020-10-20 18:05:10','2020-10-20 18:05:58'),(20,'John Doe','5th Avenue','Nova York','(11) 99840-3211','2020-10-22 15:30:44','2020-10-22 15:30:44'),(21,'Jeff Bezos','1st Avenue','Washington','(11) 98129-8391','2020-10-22 15:31:10','2020-10-22 15:31:10'),(22,'David Gilmour','King\'s Esplanade','Hove','(11) 91239-1231','2020-10-22 15:32:27','2020-10-22 15:32:27');
 /*!40000 ALTER TABLE `fornecedores` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -129,7 +129,7 @@ CREATE TABLE `funcionarios` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -138,7 +138,7 @@ CREATE TABLE `funcionarios` (
 
 LOCK TABLES `funcionarios` WRITE;
 /*!40000 ALTER TABLE `funcionarios` DISABLE KEYS */;
-INSERT INTO `funcionarios` VALUES (1,'Fulaninho de Abreu','2020-01-13','2020-10-20 03:09:23','2020-10-20 17:03:21'),(2,'Jeff Bezos','2020-10-20','2020-10-20 18:27:47','2020-10-20 18:27:47');
+INSERT INTO `funcionarios` VALUES (1,'Fulaninho de Abreu','2020-01-13','2020-10-20 03:09:23','2020-10-20 17:03:21'),(2,'Jeff Bezos','2020-10-20','2020-10-20 18:27:47','2020-10-20 18:27:47'),(3,'J R R Tolkien','2020-10-12','2020-10-22 15:56:46','2020-10-22 15:56:46'),(4,'Gandalf The White','2020-10-22','2020-10-22 16:02:58','2020-10-22 16:02:58');
 /*!40000 ALTER TABLE `funcionarios` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -161,7 +161,7 @@ CREATE TABLE `livros` (
   PRIMARY KEY (`id`),
   KEY `livros_id_fornecedor_foreign` (`id_fornecedor`),
   CONSTRAINT `livros_id_fornecedor_foreign` FOREIGN KEY (`id_fornecedor`) REFERENCES `fornecedores` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -170,7 +170,7 @@ CREATE TABLE `livros` (
 
 LOCK TABLES `livros` WRITE;
 /*!40000 ALTER TABLE `livros` DISABLE KEYS */;
-INSERT INTO `livros` VALUES (2,19,'Harry potter',2009,2,'Abril1','2020-10-20 04:10:38','2020-10-20 18:48:06');
+INSERT INTO `livros` VALUES (2,19,'Senhor dos Anéis',2009,2,'Abril1','2020-10-20 04:10:38','2020-10-22 15:44:12'),(3,20,'Senhor dos Anéis',2000,3,'Abril','2020-10-22 15:43:48','2020-10-22 15:44:15'),(4,19,'Senhor dos Anéis',2008,1,'Abril','2020-10-22 15:44:00','2020-10-22 15:44:18'),(5,21,'Senhor dos Anéis',2000,1,'Época','2020-10-22 15:44:32','2020-10-22 15:44:32'),(6,22,'Star Wars',2000,1,'Casa do Papel','2020-10-22 15:44:55','2020-10-22 15:44:55'),(7,19,'Sapiens',2000,1,'Abril','2020-10-22 15:45:23','2020-10-22 15:45:23');
 /*!40000 ALTER TABLE `livros` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -262,4 +262,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-10-22  8:58:59
+-- Dump completed on 2020-10-22 10:04:33
