@@ -23,6 +23,8 @@ Route::post('/fornecedores/criar', 'FornecedoresController@store')->name('criar_
 Route::get('/fornecedores/editar/{id}', 'FornecedoresController@edit')->name('editar_fornecedor');
 Route::put('/fornecedores/editar/{id}', 'FornecedoresController@update')->name('alterar_fornecedor');
 Route::delete('/fornecedores/{id}', 'FornecedoresController@delete')->name('excluir_fornecedor');
+Route::get('/reports/fornecedores/mostbooks', 'FornecedoresController@mostBooks')->name('melhores_fornecedores');
+Route::get('/reports/fornecedores/mosteditions', 'FornecedoresController@mostEditions')->name('mais_edicoes');
 
 
 Route::get('/funcionarios/criar', 'FuncionariosController@create');
@@ -31,6 +33,8 @@ Route::post('/funcionarios/criar', 'FuncionariosController@store')->name('criar_
 Route::get('/funcionarios/editar/{id}', 'FuncionariosController@edit')->name('editar_funcionario');
 Route::put('/funcionarios/editar/{id}', 'FuncionariosController@update')->name('alterar_funcionario');
 Route::delete('/funcionarios/{id}', 'FuncionariosController@delete')->name('excluir_funcionario');
+Route::get('/reports/funcionarios/mostsupplies', 'FuncionariosController@mostSupplies')->name('mais_estoque');
+Route::get('/reports/funcionarios/mostbooks', 'FuncionariosController@mostBooks')->name('mais_livros');
 
 Route::get('/livros/criar', 'LivrosController@create');
 Route::get('/livros', 'LivrosController@showAll')->name('exibir_livros');

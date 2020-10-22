@@ -6,6 +6,7 @@ use App\Models\Fornecedor;
 use App\Models\Livro;
 use Illuminate\Database\QueryException;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class LivrosController extends Controller
 {
@@ -95,4 +96,5 @@ class LivrosController extends Controller
 
         return redirect()->route('exibir_livros')->with('flash_message', 'Livro criado com sucesso.');
     }
+
 }

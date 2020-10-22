@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Fornecedor;
 use Illuminate\Database\QueryException;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class FornecedoresController extends Controller
 {
@@ -27,16 +28,19 @@ class FornecedoresController extends Controller
         'telefone.phone_number' => 'O telefone deve ser no formato (##) ####-#### ou (##) #####-####'
     ];
 
-    public function create() {
+    public function create()
+    {
         return view('fornecedores.create');
     }
 
-    public function edit($id) {
+    public function edit($id)
+    {
         $fornecedor = Fornecedor::findOrFail($id);
         return view('fornecedores.edit', ['fornecedor' => $fornecedor]);
     }
 
-    public function update($id, Request $request) {
+    public function update($id, Request $request)
+    {
         $request->validate($this->validations, $this->messages);
 
         $fornecedor = Fornecedor::findOrFail($id);
@@ -51,7 +55,8 @@ class FornecedoresController extends Controller
         return redirect()->route('exibir_fornecedores')->with('flash_message', 'Fornecedor atualizado com sucesso.');
     }
 
-    public function delete($id) {
+    public function delete($id)
+    {
         $fornecedor = Fornecedor::findOrFail($id);
         try {
             $fornecedor->delete();
@@ -65,12 +70,14 @@ class FornecedoresController extends Controller
     }
 
 
-    public function showAll() {
+    public function showAll()
+    {
         $fornecedores = Fornecedor::all();
         return view('fornecedores.read', ['fornecedores' => $fornecedores]);
     }
 
-    public function store(Request $request) {
+    public function store(Request $request)
+    {
         $request->validate($this->validations, $this->messages);
         Fornecedor::create([
             'nome' => $request->nome,
@@ -79,5 +86,31 @@ class FornecedoresController extends Controller
             'telefone' => $request->telefone
         ]);
         return redirect()->route('exibir_fornecedores')->with('flash_message', 'Fornecedor criado com sucesso.');
+    }
+
+    public function mostBooks()
+    {
+        $fornecedores = DB::table('fornecedores')
+            ->select('fornecedores.nome', 'fornecedores.id')
+            ->addSelect(DB::raw('count(livros.id) as total'))
+            ->leftJoin('livros', 'livros.id_fornecedor', '=', 'fornecedores.id')
+            ->groupBy('fornecedores.id')
+            ->orderBy('total', 'DESC')
+            ->get();
+
+        return view('fornecedores.mostbooks', ['fornecedores' => $fornecedores]);
+    }
+
+    public function mostEditions()
+    {
+        $fornecedores = DB::table('fornecedores')
+            ->select('fornecedores.nome', 'fornecedores.id', 'livros.titulo')
+            ->addSelect(DB::raw('count(livros.edicao) as total'))
+            ->join('livros', 'livros.id_fornecedor', '=', 'fornecedores.id')
+            ->groupBy('livros.titulo', 'fornecedores.id')
+            ->orderBy('total', 'DESC')
+            ->get();
+
+        return view('fornecedores.mosteditions', ['fornecedores' => $fornecedores]);
     }
 }

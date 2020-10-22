@@ -40,6 +40,26 @@
                             Estoques
                         </a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{route('melhores_fornecedores')}}">
+                            Relatório de fornecedores com mais livros
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{route('mais_edicoes')}}">
+                            Relatório de fornecedores com mais edições por título
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{route('mais_estoque')}}">
+                            Relatório de funcionários com atualização em maior estoque
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{route('mais_livros')}}">
+                            Relatório de funcionários com atualização em mais livros
+                        </a>
+                    </li>
                 </ul>
             </div>
         </nav>
